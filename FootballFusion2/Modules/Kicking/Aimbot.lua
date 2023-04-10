@@ -1,8 +1,7 @@
 local Aimbot = {}
 
 do
-    local AimbotSection = Variables.Kicking:AddSection("Aimbot", false)
-    AimbotSection:CreateToggle({
+    Variables.Kicking:CreateToggle({
         Name = "Aimbot Toggle",
         CurrentValue = false,
         Flag = "KickerAimbot_Enabled",

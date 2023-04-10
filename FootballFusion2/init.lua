@@ -38,19 +38,11 @@ Variables.Window = Variables.Library:CreateWindow({
     }
 })
 
--- Variables.CatchingTab = Variables.Window:CreateTab("Catching")
--- Variables.SwattingTab = Variables.Window:CreateTab("Swatting")
--- Variables.Physics = Variables.Window:CreateTab("Physics")
--- Variables.Kicking = Variables.Window:CreateTab("Kicking")
-local Tab = Variables.Window:CreateTab("Tab Example", 4483362458)
-local Button = Tab:CreateButton({
-   Name = "Button Example",
-   Info = "Button info/Description.", -- Speaks for itself, Remove if none.
-   Interact = 'Changable',
-   Callback = function()
-   -- The function that takes place when the button is pressed
-   end,
-})
+Variables.CatchingTab = Variables.Window:CreateTab("Catching")
+Variables.SwattingTab = Variables.Window:CreateTab("Swatting")
+Variables.Physics = Variables.Window:CreateTab("Physics")
+Variables.Kicking = Variables.Window:CreateTab("Kicking")
+
 -- // Bootup
 
 -- Variables.Mags = loadstring(game:HttpGet("https://raw.githubusercontent.com/itstylerrr/GreezyHub/main/FootballFusion2/Modules/Catching/Mags.lua"))()

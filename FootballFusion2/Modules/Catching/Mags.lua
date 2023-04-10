@@ -7,9 +7,7 @@ local MagToggle;
 local DistanceSlider;
 do
     local LastChanged = 0
-
-    local MagSection = Variables.CatchingTab:CreateSection("Mags", false)
-    local place0 = MagSection:CreateToggle({
+    local place0 = Variables.CatchingTab:CreateToggle({
         Name = "Mag Toggle",
         CurrentValue = false,
         Flag = "Mags_Enabled",
@@ -17,7 +15,7 @@ do
         end
     })
     getgenv().Variables.MagDistance = 8
-    DistanceSlider = MagSection:CreateSlider({
+    DistanceSlider = Variables.CatchingTab:CreateSlider({
         Name = "Mag Distance",
         Range = {8, 40},
         Increment = 1,
@@ -29,7 +27,7 @@ do
         end
     })
     
-    local place = MagSection:CreateKeybind({
+    local place = Variables.CatchingTab:CreateKeybind({
         Name = "Mag Toggle Key",
         CurrentKeybind = "Q",
         HoldToInteract = false,
