@@ -2,7 +2,7 @@ local Grapher = {}
 
 --// UI Setup
 do
-    local GrapherSection = Variables.CatchingTab:CreateSection("Grapher")
+    local GrapherSection = Variables.CatchingTab:CreateSection("Grapher", false)
     GrapherSection:CreateToggle({
         Name = "Graphing Toggle",
         CurrentValue = false,

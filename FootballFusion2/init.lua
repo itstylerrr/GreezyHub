@@ -11,28 +11,35 @@ Variables.Client.CharacterAdded:Connect(function(Character)
     Variables.Character = Character 
 end)
 
-Variables.Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+Variables.Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 Variables.Window = Variables.Library:CreateWindow({
-	Name = "Greezy Hub",
-	LoadingTitle = "Greezy Development",
-	LoadingSubtitle = "by Greezy",
-	ConfigurationSaving = {
-		Enabled = true,
-		FolderName = "Greezy Development",
-		FileName = "Greezy Hub"
-	},
-	KeySystem = true, -- Set this to true to use our key system
-	KeySettings = {
-		Title = "Greezy Hub",
-		Subtitle = "Key System",
-		Note = "Join the discord (discord.gg/a7V6C4dAQj)",
-		SaveKey = true,
-		Key = "a7V6C4dAQj"
-	}
+    Name = "Greezy Hub",
+    LoadingTitle = "Greezy Development",
+    LoadingSubtitle = "by Greezy",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = "GreezyHub", -- Create a custom folder for your hub/game
+       FileName = "greezyhub"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "a7V6C4dAQj", -- The Discord invite code, do not include discord.gg/
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Greezy Hub",
+       Subtitle = "Key System",
+       Note = "Join the discord (discord.gg/a7V6C4dAQj)",
+       FileName = "GreezyHubKey",
+       SaveKey = true,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "1234"
+    }
 })
 
 Variables.CatchingTab = Variables.Window:CreateTab("Catching")
-Variables.SwattingTab = Variables.Window:CreateTab("Swatting");
+Variables.SwattingTab = Variables.Window:CreateTab("Swatting")
 Variables.Physics = Variables.Window:CreateTab("Physics")
 Variables.Kicking = Variables.Window:CreateTab("Kicking")
 -- // Bootup
