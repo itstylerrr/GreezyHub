@@ -1,3 +1,4 @@
+getgenv().Variables
 local Aimbot = {}
 
 do
