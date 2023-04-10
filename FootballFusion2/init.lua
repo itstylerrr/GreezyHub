@@ -45,13 +45,13 @@ Variables.Kicking = Variables.Window:CreateTab("Kicking")
 -- // Bootup
 
 local MagSection = Variables.CatchingTab:CreateSection("Mags", false)
-local Button = MagSection:CreateButton({
-    Name = "Button Example",
-    Info = "Button info/Description.", -- Speaks for itself, Remove if none.
-    Interact = 'Changable',
-    Callback = function()
-    -- The function that takes place when the button is pressed
-    end,
+local Button = Variables.CatchingTab:CreateButton({
+   Name = "Button Example",
+   Info = "Button info/Description.", -- Speaks for itself, Remove if none.
+   Interact = 'Changable',
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
 })
 
 -- Variables.Mags = loadstring(game:HttpGet("https://raw.githubusercontent.com/itstylerrr/GreezyHub/main/FootballFusion2/Modules/Catching/Mags.lua"))()
