@@ -15,7 +15,7 @@ Variables.Library = loadstring(game:HttpGet"https://raw.githubusercontent.com/da
 
 -- Build main UI
 
-Variables.Window = Variables.Library:Window("Greezy Hub", "v0.5.3", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+Variables.Window = Variables.Library:Window("Greezy Hub", "v0.5.4", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 
 Variables.CatchingTab = Variables.Window:Tab("Catching", "http://www.roblox.com/asset/?id=6023426915")
 Variables.SwattingTab = Variables.Window:Tab("Swatting", "http://www.roblox.com/asset/?id=6023426915")
@@ -23,10 +23,10 @@ Variables.Physics = Variables.Window:Tab("Physics", "http://www.roblox.com/asset
 Variables.Kicking = Variables.Window:Tab("Kicking", "http://www.roblox.com/asset/?id=6023426915")
 
 Variables.CatchingLabel = Variables.CatchingTab:Label("Magging")
-Variables.MagToggle = Variables.CatchingTab:Toggle("Toggle Mags", "Toggle mags on and off.", function(t)
-    print("Mag Toggled")
-end
-)
+Variables.MagToggle = Variables.CatchingTab:Toggle("Toggle Mags", "Toggle the mags on and off.", function(t)
+    print("Mag Value:")
+    print(t)
+    end)
 Variables.MagSlider = Variables.CatchingTab:Slider("Mag Distance", "The distace for mags.", 1, 40, 7, function(t)
     print("Slider Value: ")
     print(t)
@@ -35,10 +35,10 @@ end
 Variables.CatchingTab:Line()
 
 Variables.GraphingLabel = Variables.CatchingTab:Label("Graphing")
-Variables.GraphingToggle = Variables.CatchingTab:Toggle("Toggle Graph", "Toggle the graph on and off.", function(t)
-    print("Graph Toggled")
-end
-)
+Variables.GraphingToggle = Variables.CatchingTab:Toggle("Toggle Graph", "Toggle the graphing system on and off.", function(t)
+    print("Graph Value:")
+    print(t)
+    end)
 
 
 -- Bootup
