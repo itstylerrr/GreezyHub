@@ -15,7 +15,7 @@ Variables.Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/S
 
 -- Build main UI
 
-Variables.Window = Variables.Library.new("Greezy Hub", game.Players.LocalPlayer.UserID, "v0.5.5")
+Variables.Window = Variables.Library.new("Greezy Hub", game.Players.LocalPlayer.UserID, "v0.5.6")
 
 Variables.CatchingTab = Variables.Window:Category("Catching", "http://www.roblox.com/asset/?id=6023426915")
 Variables.SwattingTab = Variables.Window:Category("Swatting", "http://www.roblox.com/asset/?id=6023426915")
@@ -23,7 +23,7 @@ Variables.Physics = Variables.Window:Category("Physics", "http://www.roblox.com/
 Variables.Kicking = Variables.Window:Category("Kicking", "http://www.roblox.com/asset/?id=6023426915")
 
 Variables.CatchingLabel = Variables.CatchingTab:Button("Magging", "http://www.roblox.com/asset/?id=8395747586")
-Variables.MagToggle = Variables.CatchingTab:Toggle({
+Variables.MagToggle = Variables.CatchingLabel:Toggle({
     Title = "Toggle Mags",
     Description = "",
     Default = false
@@ -43,7 +43,7 @@ Variables.MagSlider = Variables.CatchingTab:Slider({
 end)
 
 Variables.GraphingLabel = Variables.CatchingTab:Button("Graphing", "http://www.roblox.com/asset/?id=8395747586")
-Variables.GraphingToggle = Variables.CatchingTab:Toggle({
+Variables.GraphingToggle = Variables.CatchingLabel:Toggle({
     Title = "Toggle Graphing",
     Description = "",
     Default = false
