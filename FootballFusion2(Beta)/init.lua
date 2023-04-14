@@ -11,19 +11,36 @@ Variables.Client.CharacterAdded:Connect(function(Character)
     Variables.Character = Character 
 end)
 
-Variables.Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iHavoc101/Genesis-Studios/main/UserInterface/Luminosity.lua", true))()
+Variables.Library = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
 
 -- Build main UI
 
-Variables.Window = Variables.Library.new("Greezy Hub", "v0.5.1", 4370345701)
+Variables.Window = Variables.Library:Window("Greezy Hub", "v0.5.1", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 
-Variables.CatchingTab = Variables.Window.Tab("Catching")
-Variables.SwattingTab = Variables.Window.Tab("Swatting")
-Variables.Physics = Variables.Window.Tab("Physics")
-Variables.Kicking = Variables.Window.Tab("Kicking")
+Variables.CatchingTab = Variables.Window:Tab("Catching", "http://www.roblox.com/asset/?id=6023426915")
+Variables.SwattingTab = Variables.Window:Tab("Swatting", "http://www.roblox.com/asset/?id=6023426915")
+Variables.Physics = Variables.Window:Tab("Physics", "http://www.roblox.com/asset/?id=6023426915")
+Variables.Kicking = Variables.Window:Tab("Kicking", "http://www.roblox.com/asset/?id=6023426915")
 
-Variables.CatchingFolder = Variables.CatchingTab.Folder("Magging", "Configure the options for mags.")
-Variables.GraphingFolder = Variables.CatchingTab.Folder("Graphing", "Configure the options for graphing.")
+Variables.CatchingLabel = Variables.CatchingTab:Label("Magging")
+Variables.CatchingTab:Line()
+Variables.MagToggle = Variables.CatchingTab:Toggle("Toggle Mags", "Toggle mags on and off.", function(t)
+    print("Mag Toggle: " .. toString(t))
+end
+)
+Variables.MagSlider = Variables.CatchingTab:Slider("Mag Distance", "The distace for mags.", 1, 40, 7, function(t)
+    print("Slider Value: " .. toString(t))
+end
+)
+Variables.CatchingTab:Line()
+
+Variables.GraphingLabel = Variables.CatchingTab:Label("Graphing")
+Variables.GraphingToggle = Variables.CatchingTab:Toggle("Toggle Graph", "Toggle the graph on and off.", function(t)
+    print("Graph Toggle: " .. toString(t))
+end
+)
+Variables.CatchingTab:Line()
+
 
 -- Bootup
 
