@@ -8,6 +8,7 @@ local MagToggle;
 local DistanceSlider;
 do
     local LastChanged = 0
+    Variables.CatchingTab:Label("Magging")
     local place0 = Variables.CatchingTab:CreateToggle({
         Name = "Mag Toggle",
         CurrentValue = false,

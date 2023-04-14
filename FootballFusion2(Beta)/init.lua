@@ -11,35 +11,46 @@ Variables.Client.CharacterAdded:Connect(function(Character)
     Variables.Character = Character 
 end)
 
-Variables.Library = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+Variables.Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/StepBroFurious/Script/main/HydraHubUi.lua'))()
 
 -- Build main UI
 
-Variables.Window = Variables.Library:Window("Greezy Hub", "v0.5.4", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+Variables.Window = Variables.Library.new("Greezy Hub", game.Players.LocalPlayer.UserID, "v0.5.5")
 
-Variables.CatchingTab = Variables.Window:Tab("Catching", "http://www.roblox.com/asset/?id=6023426915")
-Variables.SwattingTab = Variables.Window:Tab("Swatting", "http://www.roblox.com/asset/?id=6023426915")
-Variables.Physics = Variables.Window:Tab("Physics", "http://www.roblox.com/asset/?id=6023426915")
-Variables.Kicking = Variables.Window:Tab("Kicking", "http://www.roblox.com/asset/?id=6023426915")
+Variables.CatchingTab = Variables.Window:Category("Catching", "http://www.roblox.com/asset/?id=6023426915")
+Variables.SwattingTab = Variables.Window:Category("Swatting", "http://www.roblox.com/asset/?id=6023426915")
+Variables.Physics = Variables.Window:Category("Physics", "http://www.roblox.com/asset/?id=6023426915")
+Variables.Kicking = Variables.Window:Category("Kicking", "http://www.roblox.com/asset/?id=6023426915")
 
-Variables.CatchingLabel = Variables.CatchingTab:Label("Magging")
-Variables.MagToggle = Variables.CatchingTab:Toggle("Toggle Mags", "Toggle the mags on and off.", function(t)
-    print("Mag Value:")
-    print(t)
-    end)
-Variables.MagSlider = Variables.CatchingTab:Slider("Mag Distance", "The distace for mags.", 1, 40, 7, function(t)
-    print("Slider Value: ")
-    print(t)
-end
-)
-Variables.CatchingTab:Line()
+Variables.CatchingLabel = Variables.CatchingTab:Button("Magging", "http://www.roblox.com/asset/?id=8395747586")
+Variables.MagToggle = Variables.CatchingTab:Toggle({
+    Title = "Toggle Mags",
+    Description = "",
+    Default = false
+    }, function(value)
+    print("Mag Toggle:")
+    print(value)
+end)
+Variables.MagSlider = Variables.CatchingTab:Slider({
+    Title = "Mag Distance",
+    Description = "",
+    Default = 7,
+    Min = 1,
+    Max = 40
+    }, function(value)
+    print("Mag Distance:")
+    print(value)
+end)
 
-Variables.GraphingLabel = Variables.CatchingTab:Label("Graphing")
-Variables.GraphingToggle = Variables.CatchingTab:Toggle("Toggle Graph", "Toggle the graphing system on and off.", function(t)
-    print("Graph Value:")
-    print(t)
-    end)
-
+Variables.GraphingLabel = Variables.CatchingTab:Button("Graphing", "http://www.roblox.com/asset/?id=8395747586")
+Variables.GraphingToggle = Variables.CatchingTab:Toggle({
+    Title = "Toggle Graphing",
+    Description = "",
+    Default = false
+    }, function(value)
+    print("Graphing Toggle:")
+    print(value)
+end)
 
 -- Bootup
 
