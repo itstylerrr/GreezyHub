@@ -15,12 +15,15 @@ Variables.Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/i
 
 -- Build main UI
 
-Variables.Window = Variables.Library.new("Greezy Hub", "v0.5.0", 4370345701)
+Variables.Window = Variables.Library.new("Greezy Hub", "v0.5.1", 4370345701)
 
 Variables.CatchingTab = Variables.Window.Tab("Catching")
 Variables.SwattingTab = Variables.Window.Tab("Swatting")
 Variables.Physics = Variables.Window.Tab("Physics")
 Variables.Kicking = Variables.Window.Tab("Kicking")
+
+Variables.CatchingFolder = Variables.CatchingTab.Folder("Magging", "Configure the options for mags.")
+Variables.GraphingFolder = Variables.CatchingTab.Folder("Graphing", "Configure the options for graphing.")
 
 -- Bootup
 
